@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 int main() {
-	double degree[] = { -5.34,3.67,19.76,28.76,35.63 };
-	int size = sizeof(degree) / sizeof(double);
+	int data[] = { 3,21,35,57,24,82,8 };
 
-	for (int i = 0;i < size;i++) {
-		printf("%.2lf ", degree[i]);
+	for (int i = 0; i <sizeof(data)/sizeof(int);i++){
+		*(data + i) += 10;
+		printf("%d ", *(data + i));
+
 	}
 }
