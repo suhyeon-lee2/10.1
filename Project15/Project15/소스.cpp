@@ -1,23 +1,27 @@
 #include <stdio.h>
 #pragma warning(disable:4996)
 
-double change(int a);
+int intpow(int a, int b);
 
 int main()
 {
-	double inch;
-	printf("인치를 입력하세요: ");
-	scanf("%lf", &inch);
-	printf("%f인치는 %.2fcm입니다.\n", inch, change(inch));
+	int m, n;
+	printf("두 개의 정수를 입력하세요: ");
+	scanf("%d%d", &m, &n);
+	printf("함수의 결과는 %d입니다.\n", intpow(m, n));
 
 	return 0;
 }
 
-double change(int a)
+int intpow(int a, int b)
 {
-	double cm;
-	cm = (a * 2.54);
-	return (cm);
+	int mn = 0;
+	mn = a * b;
+
+	return mn;
 }
+
+
+
 
 
